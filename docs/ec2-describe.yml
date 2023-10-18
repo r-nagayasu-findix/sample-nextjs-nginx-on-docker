@@ -1,0 +1,149 @@
+Reservations:
+  - Groups: []
+    Instances:
+      - AmiLaunchIndex: 0
+        Architecture: x86_64
+        BlockDeviceMappings:
+          - DeviceName: /dev/xvda
+            Ebs:
+              AttachTime: "2023-10-17T00:43:24+00:00"
+              DeleteOnTermination: true
+              Status: attached
+              VolumeId: vol-06dee26a75764c529
+        BootMode: uefi-preferred
+        CapacityReservationSpecification:
+          CapacityReservationPreference: open
+        ClientToken: 861468a0-46a4-4354-b6e8-513f4680a6d3
+        CpuOptions:
+          CoreCount: 1
+          ThreadsPerCore: 1
+        CurrentInstanceBootMode: legacy-bios
+        EbsOptimized: false
+        EnaSupport: true
+        EnclaveOptions:
+          Enabled: false
+        HibernationOptions:
+          Configured: false
+        Hypervisor: xen
+        ImageId: ami-0fd8f5842685ca887
+        InstanceId: i-0e4a5878b45a6e86c
+        InstanceType: t2.small
+        KeyName: For_SKILLMAPWEB
+        LaunchTime: "2023-10-18T02:00:02+00:00"
+        MaintenanceOptions:
+          AutoRecovery: default
+        MetadataOptions:
+          HttpEndpoint: enabled
+          HttpProtocolIpv6: disabled
+          HttpPutResponseHopLimit: 2
+          HttpTokens: required
+          InstanceMetadataTags: disabled
+          State: applied
+        Monitoring:
+          State: disabled
+        NetworkInterfaces:
+          - Association:
+              IpOwnerId: "833635151774"
+              PublicDnsName: ""
+              PublicIp: 54.168.78.204
+            Attachment:
+              AttachTime: "2023-10-17T00:43:23+00:00"
+              AttachmentId: eni-attach-00474f98f1f59aa66
+              DeleteOnTermination: true
+              DeviceIndex: 0
+              NetworkCardIndex: 0
+              Status: attached
+            Description: ""
+            Groups:
+              - GroupId: sg-06b5fb456e0559f69
+                GroupName: For_Public_EC2
+            InterfaceType: interface
+            Ipv6Addresses: []
+            MacAddress: 06:25:56:7c:4f:fd
+            NetworkInterfaceId: eni-013abbc84cddd5753
+            OwnerId: "833635151774"
+            PrivateIpAddress: 10.0.0.4
+            PrivateIpAddresses:
+              - Association:
+                  IpOwnerId: "833635151774"
+                  PublicDnsName: ""
+                  PublicIp: 54.168.78.204
+                Primary: true
+                PrivateIpAddress: 10.0.0.4
+            SourceDestCheck: true
+            Status: in-use
+            SubnetId: subnet-0129f139f795cbeae
+            VpcId: vpc-0231e3c647f450311
+        Placement:
+          AvailabilityZone: ap-northeast-1a
+          GroupName: ""
+          Tenancy: default
+        PlatformDetails: Linux/UNIX
+        PrivateDnsName: ip-10-0-0-4.ap-northeast-1.compute.internal
+        PrivateDnsNameOptions:
+          EnableResourceNameDnsAAAARecord: false
+          EnableResourceNameDnsARecord: false
+          HostnameType: ip-name
+        PrivateIpAddress: 10.0.0.4
+        ProductCodes: []
+        PublicDnsName: ""
+        PublicIpAddress: 54.168.78.204
+        RootDeviceName: /dev/xvda
+        RootDeviceType: ebs
+        SecurityGroups:
+          - GroupId: sg-06b5fb456e0559f69
+            GroupName: For_Public_EC2
+        SourceDestCheck: true
+        State:
+          Code: 16
+          Name: running
+        StateTransitionReason: ""
+        SubnetId: subnet-0129f139f795cbeae
+        Tags:
+          - Key: Name
+            Value: SKILLMAPWEB
+        UsageOperation: RunInstances
+        UsageOperationUpdateTime: "2023-10-17T00:43:23+00:00"
+        VirtualizationType: hvm
+        VpcId: vpc-0231e3c647f450311
+    OwnerId: "833635151774"
+    ReservationId: r-0ad05654ac1364d2f
+
+SecurityGroups:
+  - Description: For_Public_EC2
+    GroupId: sg-06b5fb456e0559f69
+    GroupName: For_Public_EC2
+    IpPermissions:
+      - FromPort: 80
+        IpProtocol: tcp
+        IpRanges:
+          - CidrIp: 0.0.0.0/0
+        Ipv6Ranges: []
+        PrefixListIds: []
+        ToPort: 80
+        UserIdGroupPairs: []
+      - FromPort: 22
+        IpProtocol: tcp
+        IpRanges:
+          - CidrIp: 0.0.0.0/0
+        Ipv6Ranges: []
+        PrefixListIds: []
+        ToPort: 22
+        UserIdGroupPairs: []
+      - FromPort: 443
+        IpProtocol: tcp
+        IpRanges:
+          - CidrIp: 0.0.0.0/0
+        Ipv6Ranges: []
+        PrefixListIds: []
+        ToPort: 443
+        UserIdGroupPairs: []
+    IpPermissionsEgress:
+      - IpProtocol: "-1"
+        IpRanges:
+          - CidrIp: 0.0.0.0/0
+        Ipv6Ranges: []
+        PrefixListIds: []
+        UserIdGroupPairs: []
+    OwnerId: "833635151774"
+    VpcId: vpc-0231e3c647f450311
